@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Education = () => {
     return (
-        <section className="py-24 bg-white dark:bg-black" id="education">
+        <section className="py-16 md:py-24 bg-white dark:bg-black" id="education">
             <div className="max-w-4xl mx-auto px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-black dark:from-neutral-50 dark:to-neutral-400 tracking-tight">

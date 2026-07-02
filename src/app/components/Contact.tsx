@@ -10,7 +10,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const Contact = () => {
     return (
-        <section id="contact" className="relative py-10 bg-white dark:bg-black overflow-hidden">
+        <section id="contact" className="relative py-16 md:py-24 bg-white dark:bg-black overflow-hidden">
             <BackgroundBeams />
 
             <div className="text-center mb-12">
