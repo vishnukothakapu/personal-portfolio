@@ -5,6 +5,7 @@ import {
     BrainIcon,
     HomeIcon,
     ScrollTextIcon,
+    GraduationCap,
     SunIcon,
     MoonIcon,
 } from "lucide-react";
@@ -25,6 +26,7 @@ import { Dock, DockIcon } from "@/components/magicui/dock";
 const DATA = {
     navbar: [
         { href: "#home", icon: HomeIcon, label: "Home" },
+        { href: "#education", icon: GraduationCap, label: "Education" },
         { href: "#skills", icon: BrainIcon, label: "Skills" },
         { href: "#projects", icon: ScrollTextIcon, label: "Projects" },
         { href: "#contact", icon: AtSignIcon, label: "Contact" },

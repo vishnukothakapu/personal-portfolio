@@ -13,9 +13,9 @@ const Contact = () => {
         <section id="contact" className="relative py-10 bg-white dark:bg-black overflow-hidden">
             <BackgroundBeams />
 
-            <div className="text-center">
-                <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
-                    Let's Connect 🚀
+            <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-black dark:from-neutral-50 dark:to-neutral-400 tracking-tight">
+                    Let's Connect
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">
                     Have a project in mind, looking to hire,<br /> or just want to say hi? Drop me a message!

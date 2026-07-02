@@ -24,3 +24,8 @@ body {
   background: #fff;
   color:#000;
 }
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}

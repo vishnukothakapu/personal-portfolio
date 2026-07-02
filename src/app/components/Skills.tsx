@@ -1,129 +1,134 @@
 "use client";
-import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-import {IconType} from 'react-icons';
+import { IconType } from "react-icons";
 import {
-    SiJavascript,
-    SiTypescript,
-    SiMongodb,
-    SiNextdotjs,
-    SiExpress,
-    SiNodedotjs,
-    SiReact,
-    SiTailwindcss,
-    SiBootstrap,
-    SiExpo,
-    SiCss3,
-    SiHtml5,
-    SiWeb3Dotjs,
-    SiRemix,
-    SiSolidity,
-    SiCplusplus,
-    SiGit,
-    SiPostman,
-    SiWebstorm,
-    SiWordpress,
-    SiSupabase,
-    SiFastapi,
-    SiFigma
+    SiReact, SiNextdotjs, SiTypescript, SiNodedotjs, SiPython, SiPostgresql, SiDocker, SiKubernetes, 
+    SiCplusplus, SiJavascript, SiExpress, SiMongodb, SiSolidity, SiWeb3Dotjs, SiPostman, SiExpo, 
+    SiSupabase, SiFastapi, SiGo, SiGnubash, SiEjs, SiRedis, SiFirebase, SiMysql, SiAmazonwebservices, 
+    SiDigitalocean, SiTerraform, SiJenkins, SiGithubactions, SiEthers, SiPolygon, SiPrometheus, 
+    SiGit, SiLinux, SiEthereum
 } from "react-icons/si";
-import { useState, useEffect } from "react";
+import { FaDatabase } from "react-icons/fa";
+
 type SkillType = {
     name: string;
-    icon:IconType;
-    color: string;
+    icon?: IconType;
 };
-const skills = [
-    { name: "HTML5", icon: SiHtml5, color: "text-[#E34F26]" },
-    { name: "CSS3", icon: SiCss3, color: "text-[#1572B6]" },
-    { name: "Bootstrap", icon: SiBootstrap, color: "text-[#7952B3]" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-[#06B6D4]" },
-    { name: "JavaScript", icon: SiJavascript, color: "text-[#F7DF1E]" },
-    { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]" },
-    { name: "MongoDB", icon: SiMongodb, color: "text-[#47A248]" },
-    { name: "Express.js", icon: SiExpress, color: "text-gray-700 dark:text-gray-300" },
-    { name: "React.js", icon: SiReact, color: "text-[#61DAFB]" },
-    { name: "Node.js", icon: SiNodedotjs, color: "text-[#339933]" },
-    { name: "Next.js", icon: SiNextdotjs, color: "text-black dark:text-white" },
-    { name: "React Native", icon: SiReact, color: "text-[#61DBFB]" },
-    { name: "WordPress", icon: SiWordpress, color: "text-[#21759B]" },
-    { name: "Solidity", icon: SiSolidity, color: "text-[#363636]" },
-    { name: "Web3.js", icon: SiWeb3Dotjs, color: "text-[#F16822]" },
-    { name: "C++", icon: SiCplusplus, color: "text-[#00599C]" },
-    { name: "Git", icon: SiGit, color: "text-[#F05032]" },
-    { name: "Postman", icon: SiPostman, color: "text-[#FF6C37]" },
-    { name: "Expo", icon: SiExpo, color: "text-[#000020] dark:text-white" },
-    { name: "Supabase", icon: SiSupabase, color: "text-[#3ECF8E]" },
-    { name: "WebStorm", icon: SiWebstorm, color: "text-[#2496ED]" },
-    { name: "Figma", icon: SiFigma, color: "text-[#F24E1E]" },
-    { name: "FastAPI", icon: SiFastapi, color: "text-[#009688]" },
-    { name: "Remix", icon: SiRemix, color: "text-black dark:text-white" },
-  ];
-  
+
+type SkillCategory = {
+    title: string;
+    skills: SkillType[];
+};
+
+const skillCategories: SkillCategory[] = [
+    {
+        title: "Languages",
+        skills: [
+            { name: "Python", icon: SiPython },
+            { name: "JavaScript", icon: SiJavascript },
+            { name: "TypeScript", icon: SiTypescript },
+            { name: "Go", icon: SiGo },
+            { name: "C/C++", icon: SiCplusplus },
+            { name: "SQL", icon: FaDatabase },
+            { name: "Solidity", icon: SiSolidity },
+            { name: "Bash", icon: SiGnubash },
+        ]
+    },
+    {
+        title: "Frameworks & Libraries",
+        skills: [
+            { name: "React.js", icon: SiReact },
+            { name: "Next.js", icon: SiNextdotjs },
+            { name: "Node.js", icon: SiNodedotjs },
+            { name: "Express.js", icon: SiExpress },
+            { name: "React Native", icon: SiReact },
+            { name: "Expo", icon: SiExpo },
+            { name: "FastAPI", icon: SiFastapi },
+            { name: "EJS", icon: SiEjs },
+        ]
+    },
+    {
+        title: "Databases",
+        skills: [
+            { name: "PostgreSQL", icon: SiPostgresql },
+            { name: "MongoDB", icon: SiMongodb },
+            { name: "Redis", icon: SiRedis },
+            { name: "Supabase", icon: SiSupabase },
+            { name: "Firebase", icon: SiFirebase },
+            { name: "MySQL", icon: SiMysql },
+        ]
+    },
+    {
+        title: "Cloud & DevOps",
+        skills: [
+            { name: "AWS", icon: SiAmazonwebservices },
+            { name: "DigitalOcean", icon: SiDigitalocean },
+            { name: "Docker", icon: SiDocker },
+            { name: "Kubernetes", icon: SiKubernetes },
+            { name: "Terraform", icon: SiTerraform },
+            { name: "Jenkins", icon: SiJenkins },
+            { name: "GitHub Actions", icon: SiGithubactions },
+        ]
+    },
+    {
+        title: "Blockchain",
+        skills: [
+            { name: "Solidity", icon: SiSolidity },
+            { name: "Web3.js", icon: SiWeb3Dotjs },
+            { name: "Ethers.js", icon: SiEthers },
+            { name: "Foundry", icon: SiEthereum },
+            { name: "Polygon Testnet", icon: SiPolygon },
+        ]
+    },
+    {
+        title: "Tools & Monitoring",
+        skills: [
+            { name: "Postman", icon: SiPostman },
+            { name: "Prometheus", icon: SiPrometheus },
+            { name: "Git", icon: SiGit },
+            { name: "Linux", icon: SiLinux },
+        ]
+    }
+];
 
 const Skills = () => {
-    const [hoveredSkill, setHoveredSkill] = useState<SkillType|null>(null);
-    const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-
-    useEffect(() => {
-        const handleMouseMove = (e:MouseEvent) => {
-            setCursorPos({ x: e.clientX, y: e.clientY });
-        };
-        window.addEventListener("mousemove", handleMouseMove);
-        return () => window.removeEventListener("mousemove", handleMouseMove);
-    }, []);
-
     return (
-        <section className="py-20 bg-white dark:bg-black relative overflow-hidden" id="skills">
-            <div className="text-center">
-                <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
-                    My Skills
-                </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">
-                    Technologies & tools I work with
-                </p>
+        <section className="py-24 bg-white dark:bg-black" id="skills">
+            <div className="max-w-4xl mx-auto px-6 lg:px-8">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-black dark:from-neutral-50 dark:to-neutral-400 tracking-tight">
+                        Skills
+                    </h2>
+                    <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">
+                        Technologies and tools I work with
+                    </p>
+                </div>
+
+                <div className="flex flex-col gap-10">
+                    {skillCategories.map((category, idx) => (
+                        <div key={idx} className="flex flex-col gap-4">
+                            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                                {category.title}
+                            </h3>
+                            <div className="flex flex-wrap gap-3">
+                                {category.skills.map((skill) => (
+                                    <motion.div
+                                        key={skill.name}
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className="flex items-center gap-2 px-4 py-2 bg-transparent border border-gray-300 dark:border-gray-800 rounded-full cursor-default hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors shadow-sm"
+                                    >
+                                        {skill.icon && <skill.icon className="text-lg text-gray-800 dark:text-gray-300" />}
+                                        <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                                            {skill.name}
+                                        </span>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-
-            <div className="max-w-5xl mx-auto px-6 mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 dark:text-white ">
-                {skills.map((skill, index) => (
-                    <motion.div
-                        key={index}
-                        whileHover={{ scale: 1.1, y: -5 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="relative flex flex-col items-center justify-center bg-neutral-50 dark:bg-neutral-900 rounded-xl shadow-md p-5 transition-all duration-300 hover:shadow-xl cursor-pointer"
-                        onMouseEnter={() => setHoveredSkill(skill)}
-                        onMouseLeave={() => setHoveredSkill(null)}
-                    >
-                        <skill.icon className={`text-4xl ${skill.color} `} />
-                        <Badge variant="secondary" className="mt-3 px-3 py-1 text-sm whitespace-nowrap ">
-                            {skill.name}
-                        </Badge>
-
-                    </motion.div>
-                ))}
-
-            </div>
-
-            {hoveredSkill && (
-                <motion.div
-                    className="fixed pointer-events-none z-50"
-                    style={{
-                        left: cursorPos.x + 10,
-                        top: cursorPos.y + 10,
-                    }}
-                    animate={{
-                        scale: [0.9, 1.1, 0.9],
-                        rotate: [0, 5, -5, 0],
-                    }}
-                    transition={{
-                        duration: 1.5,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                    }}
-                >
-                    <hoveredSkill.icon className={`text-4xl ${hoveredSkill.color}`} />
-                </motion.div>
-            )}
         </section>
     );
 };

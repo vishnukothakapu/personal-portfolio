@@ -4,69 +4,68 @@ import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import Link from "next/link";
-import { SiReact, SiNextdotjs, SiTailwindcss, SiMongodb, SiNodedotjs,SiHtml5,SiCss3,SiTypescript,SiExpress,SiExpo,SiShadcnui } from "react-icons/si";
+import { SiReact, SiNextdotjs, SiTailwindcss, SiMongodb, SiNodedotjs, SiHtml5, SiCss3, SiTypescript, SiExpress, SiExpo, SiShadcnui, SiPrisma, SiPostgresql, SiGo, SiDocker, SiApachekafka, SiSupabase, SiSolidity, SiEthereum, SiPolygon, SiWeb3Dotjs } from "react-icons/si";
+import { FaHardHat } from "react-icons/fa";
 import { LinkPreview } from "@/components/ui/link-preview";
 
 const projects = [
     {
-        title: "Blogsy - Blogging Platform",
-        description: "A feature-rich blogging platform that enables users to create, edit, and manage blog posts. Users can interact by liking and commenting on posts. The platform includes authentication and a visually appealing interface.",
-        image: "/assets/images/blogsy_app.png",
+        title: "LinkID - Professional Identity Router",
+        description: "Your professional identity, simplified. One username. Clean, predictable links for every platform. Platform routing, OAuth login, and real-time dashboard.",
+        image: "/assets/images/linkid.png",
         tech: [
-            { Icon: SiHtml5, color: "text-[#E34F26]" },
-            { Icon: SiCss3, color: "text-blue-500" },
-            { Icon: SiNodedotjs, color: "text-[#5FA04E]" },
-            { Icon: SiExpress, color: "text-black dark:text-white" },
-            { Icon: SiMongodb, color: "text-[#47A248]" },
-        ],
-        link: "https://github.com/vishnukothakapu/Blogsy-Blogging-Web-App"
-    },
-    {
-        title: "EasyStay - Online Rental Platform",
-        description: "A full-stack MERN application inspired by Airbnb, where users can list, book, and manage rental properties. The platform supports authentication, room filtering, booking payments, and a user-friendly dashboard.",
-        image: "/assets/images/easystay_app.png",
-        tech: [
-            { Icon: SiMongodb, color: "text-[#47A248]" },
-            {Icon:SiExpress, color: "text-black dark:text-white" },
-            { Icon: SiReact, color: "text-[#61DAFB]" },
+            { Icon: SiNextdotjs, color: "text-black dark:text-white" },
+            { Icon: SiTypescript, color: "text-[#3178C6]" },
             { Icon: SiTailwindcss, color: "text-[#38BDF8]" },
-            { Icon: SiNodedotjs, color: "text-[#83CD29]" },
+            { Icon: SiPrisma, color: "text-black dark:text-white" },
+            { Icon: SiPostgresql, color: "text-[#336791]" },
         ],
-        link: "https://github.com/vishnukothakapu/EasyStay-MERN"
+        link: "https://github.com/vishnukothakapu/linkid"
     },
     {
-        title: "Events App - NextJS",
-        description: "A dynamic event management platform built with Next.js that allows users to create, book, and manage events seamlessly. It includes user authentication, real-time event booking, and a responsive UI.",
-        image: "/assets/images/events_app.png",
+        title: "Atlas - Self Healing Distributed Cache",
+        description: "A lightweight, distributed, in-memory key-value store built with Go. Features consistent hashing, partition replication, heartbeat-based failure detection, and automatic client read failovers.",
+        image: "/assets/images/atlas.png",
         tech: [
-    { Icon: SiNextdotjs, color: "text-black dark:text-white" },
-    { Icon: SiTailwindcss, color: "text-[#38BDF8]" },
-            {Icon:SiShadcnui,color:"text-black dark:text-white" },
-    { Icon: SiMongodb, color: "text-[#47A248]" },
-    { Icon: SiNodedotjs, color: "text-[#83CD29]" },
-
-],
-        link: "https://github.com/vishnukothakapu/EventsApp-NextJS",
+            { Icon: SiGo, color: "text-[#00ADD8]" },
+            { Icon: SiDocker, color: "text-[#2496ED]" },
+            { Icon: SiApachekafka, color: "text-black dark:text-white" },
+        ],
+        link: "https://github.com/vishnukothakapu/Atlas"
     },
     {
-        title: "Recipe Finder App - MealDB API",
-        description: "A mobile-friendly recipe discovery app that fetches data from the MealDB API. Users can search for recipes, view ingredients, get step-by-step cooking instructions, add recipes to favorites, and watch video tutorials.",
-        image: "/assets/images/recipe_app.png",
+        title: "ChitSetu - Decentralized Chit Fund",
+        description: "A decentralized platform combining fintech workflows with blockchain-backed recording. Built during a hackathon in a team of 4. As a Web3 Developer, I worked on the Solidity smart contracts and blockchain integration.",
+        image: "/assets/images/chitsetu.png",
         tech: [
-            { Icon: SiReact, color: "text-[#0088CC]" },
-            { Icon: SiCss3, color: "text-blue-500" },
+            { Icon: SiSolidity, color: "text-[#363636] dark:text-white" },
+            { Icon: SiEthereum, color: "text-[#3C3C3D] dark:text-[#ECF0F1]" },
+            { Icon: SiPolygon, color: "text-[#8247E5]" },
+            { Icon: FaHardHat, color: "text-[#FFF100]" },
+            { Icon: SiGo, color: "text-[#00ADD8]" },
+        ],
+        link: "https://github.com/Jaisheesh-2006/ChitSetu"
+    },
+    {
+        title: "HabitFlow - Habit Tracker App",
+        description: "A mobile habit tracking application built with React Native and Expo. It allows users to track daily habits, view progress, and maintain streaks with a clean and intuitive user interface.",
+        image: "/assets/images/habitflow.png",
+        tech: [
+            { Icon: SiReact, color: "text-[#61DAFB]" },
+            { Icon: SiTypescript, color: "text-[#3178C6]" },
             { Icon: SiExpo, color: "text-black dark:text-white" },
-            {Icon:SiTypescript,color:"text-[#3178C6]"},
+            { Icon: SiSupabase, color: "text-[#3ECF8E]" },
+            { Icon: SiTailwindcss, color: "text-[#38BDF8]" },
         ],
-        link: "https://github.com/vishnukothakapu/Recipe_Finder-Expo_App"
+        link: "https://github.com/vishnukothakapu/habit-tracker-expo"
     }
 ];
 
 const Projects = () => {
     return (
         <section className="py-20 bg-white dark:bg-black relative overflow-hidden" id="projects">
-            <div className="text-center">
-                <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
+            <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-black dark:from-neutral-50 dark:to-neutral-400 tracking-tight">
                     <LinkPreview url="https://github.com/vishnukothakapu">My Projects</LinkPreview>{" "}
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">

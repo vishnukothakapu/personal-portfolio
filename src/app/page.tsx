@@ -6,8 +6,10 @@ import { useRouter } from "next/navigation";
 import MenuBar from "@/app/components/Menubar";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import Hero from "@/app/components/Hero";
+import Education from "@/app/components/Education";
 import Contact from "@/app/components/Contact";
 import Skills from "./components/Skills";
+import GithubActivity from "@/app/components/GithubActivity";
 import Projects from "@/app/components/Projects";
 import { SiX, SiLinkedin, SiGithub } from "react-icons/si";
 
@@ -24,6 +26,8 @@ const Page = () => {
             <ScrollProgress className="fixed top-0 left-0 w-full" />
 
             <Hero />
+            <GithubActivity />
+            <Education />
             <Skills />
             <Projects />
             <Contact />
