@@ -63,8 +63,8 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section className="py-16 md:py-24 bg-white dark:bg-black relative overflow-hidden" id="projects">
-            <div className="text-center mb-12">
+        <section className="py-8 md:py-24 bg-white dark:bg-black relative overflow-hidden" id="projects">
+            <div className="text-center mb-8 md:mb-12">
                 <h2 className="text-3xl md:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-black dark:from-neutral-50 dark:to-neutral-400 tracking-tight">
                     <LinkPreview url="https://github.com/vishnukothakapu">My Projects</LinkPreview>{" "}
                 </h2>
@@ -73,10 +73,10 @@ const Projects = () => {
                 </p>
             </div>
 
-            <div className="max-w-6xl mx-auto px-6 mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="max-w-6xl mx-auto px-6 mt-8 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8 auto-rows-fr">
                 {projects.map((project, index) => (
-                    <CardContainer key={index} className="inter-var">
-                        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full rounded-xl p-6 border flex flex-col justify-between">
+                    <CardContainer key={index} className="inter-var w-full h-full" containerClassName="py-0 w-full h-full">
+                        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-full flex flex-col rounded-xl p-6 border justify-between">
                             <CardItem
                                 translateZ="50"
                                 className="text-xl font-bold text-black dark:text-white"

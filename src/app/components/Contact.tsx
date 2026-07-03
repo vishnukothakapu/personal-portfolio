@@ -10,10 +10,10 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const Contact = () => {
     return (
-        <section id="contact" className="relative py-16 md:py-24 bg-white dark:bg-black overflow-hidden">
+        <section id="contact" className="relative py-8 md:py-24 bg-white dark:bg-black overflow-hidden">
             <BackgroundBeams />
 
-            <div className="text-center mb-12">
+            <div className="text-center mb-8 md:mb-12">
                 <h2 className="text-3xl md:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-black dark:from-neutral-50 dark:to-neutral-400 tracking-tight">
                     Let's Connect
                 </h2>
@@ -22,7 +22,7 @@ const Contact = () => {
                 </p>
             </div>
 
-            <div className="mt-12 flex flex-col items-center justify-center">
+            <div className="mt-8 md:mt-12 flex flex-col items-center justify-center">
                 <Terminal className="border border-gray-800 w-[90%] max-w-[600px] p-6 rounded-xl shadow-lg">
                     <TypingAnimation>&gt; Initializing Contact...</TypingAnimation>
 

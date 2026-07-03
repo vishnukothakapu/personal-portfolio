@@ -18,7 +18,7 @@ const Hero = () => {
     };
     return (
         <section id="home">
-            <div className="min-h-screen flex items-center justify-center bg-white/[0.96] dark:bg-black/[0.96] relative overflow-hidden px-4 pb-4" id="#">
+            <div className="min-h-[85vh] md:min-h-screen flex items-center justify-center bg-white/[0.96] dark:bg-black/[0.96] relative overflow-hidden px-4 pb-4" id="#">
                 <div className="absolute inset-0 flex items-center justify-center">
                     <BackgroundLines className="w-full h-full" />
                 </div>

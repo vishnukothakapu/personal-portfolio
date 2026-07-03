@@ -48,9 +48,9 @@ const GithubActivity = () => {
     const isDark = mounted && resolvedTheme === "dark";
 
     return (
-        <section className="py-16 md:py-24 bg-white dark:bg-black" id="github-activity">
+        <section className="py-8 md:py-24 bg-white dark:bg-black" id="github-activity">
             <div className="max-w-4xl mx-auto px-4 md:px-8">
-                <div className="text-center mb-12">
+                <div className="text-center mb-8 md:mb-12">
                     <h2 className="text-3xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-black dark:from-neutral-50 dark:to-neutral-400 tracking-tight">
                         GitHub Activity
                     </h2>
@@ -59,7 +59,7 @@ const GithubActivity = () => {
                     </p>
                 </div>
 
-                <div className="w-full py-4 md:py-8 flex items-center justify-center">
+                <div className="w-full py-2 md:py-8 flex items-center justify-center">
                     {mounted ? (
                         <div 
                             ref={containerRef}
